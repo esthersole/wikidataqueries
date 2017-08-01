@@ -1,0 +1,10 @@
+Permalink: http://tinyurl.com/hbbrq3s
+
+#Collections
+SELECT ?item ?itemLabel ?typeLabel ?creatorLabel WHERE {
+  ?item wdt:P135 wd:Q34636.
+  ?item wdt:P195 wd:Q23681654.
+  OPTIONAL { ?item wdt:P31 ?type. }
+  OPTIONAL { ?item wdt:P170 ?creator. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],ca". }
+}
