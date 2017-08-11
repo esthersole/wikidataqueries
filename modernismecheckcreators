@@ -10,3 +10,14 @@ SELECT ?item ?itemLabel ?typeLabel ?cronoLabel ?situacioLabel ?collecLabel WHERE
   OPTIONAL { ?item wdt:P195 ?collec. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],ca". }
 }
+
+#arrquitectes
+SELECT ?item ?itemLabel ?typeLabel ?cronoLabel ?situacioLabel ?collecLabel WHERE {
+  ?item wdt:P149 wd:Q34636.
+  ?item wdt:P84 wd:Q17277292.
+  OPTIONAL { ?item wdt:P31 ?type. }
+  OPTIONAL { ?item wdt:P571 ?crono. }
+  OPTIONAL { ?item wdt:P131 ?situacio. }
+  OPTIONAL { ?item wdt:P195 ?collec. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],ca". }
+}
